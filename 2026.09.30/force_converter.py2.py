@@ -1,10 +1,13 @@
 import tkinter as tk
 from tkinter import ttk
 
+NEWTONS_PER_KILONEWTON = 1000
+NEWTONS_PER_KGF = 9.81
+
 
 def convert_force(force_kn):
-    force_n = force_kn * 1000
-    force_kgf = force_n / 9.81
+    force_n = force_kn * NEWTONS_PER_KILONEWTON
+    force_kgf = force_n / NEWTONS_PER_KGF
     return force_n, force_kgf
 
 
@@ -12,8 +15,10 @@ def convert_from_unit(value, unit):
     if unit == "kN":
         return value
     if unit == "N":
-        return value / 1000
-    return value * 9.81 / 1000
+        return value / NEWTONS_PER_KILONEWTON
+    if unit == "kgf":
+        return value * NEWTONS_PER_KGF / NEWTONS_PER_KILONEWTON
+    raise ValueError(f"지원하지 않는 단위: {unit}")
 
 
 def calculate(value_entry, unit_combo, result_label):
