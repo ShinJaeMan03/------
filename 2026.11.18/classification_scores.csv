@@ -1,0 +1,5 @@
+﻿method,accuracy,precision,recall,true_positive,false_positive,false_negative,true_negative,predicted_positive,actual_positive,evaluation_rows
+항상 0,0.947581,해당 없음,0.000000,0,0,39,705,0,39,744
+현재 상태 유지,0.919355,0.230769,0.230769,9,30,30,675,39,39,744
+로지스틱 0.50,0.943548,0.333333,0.076923,3,6,36,699,9,39,744
+로지스틱 0.20,0.912634,0.267857,0.384615,15,41,24,664,56,39,744
